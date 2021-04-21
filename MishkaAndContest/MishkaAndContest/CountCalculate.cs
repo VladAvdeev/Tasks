@@ -7,10 +7,11 @@ namespace MishkaAndContest
 {
     class CountCalculate
     {
-        public static int CompletedCount(int[] array, int skill)
+        public int CompletedCount(int[] array, int skill)
         {
-            int leftSide = array.TakeWhile(x => x <= skill).Count();
-            if(leftSide != array.Count())
+            int leftSide = array.TakeWhile(x => x <= skill).Count(); // проходим по массиву слева направо
+            if(leftSide != array.Count()) // если при проходе слева направо оказалась задача, которую Мишка не может решить
+                                          // начинаем проход по массиву справа налево
             {
                 Array.Reverse(array);
                 int rightSide = array.TakeWhile(x => x <= skill).Count();

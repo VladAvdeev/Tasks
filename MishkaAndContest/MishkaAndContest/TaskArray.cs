@@ -6,12 +6,12 @@ namespace MishkaAndContest
 {
     public class TaskArray
     {
-        public static int[] FillTask(int taskNumbers, int[] eachDifficulty)
+        public  int[] FillTask(int taskNumbers, int[] eachDifficulty)
         {
-            int[] eachTask = new int[taskNumbers];
+            int[] eachTask = new int[taskNumbers]; // массив с заданиями
             for (int i = 0; i < taskNumbers; i++)
             {
-                eachTask[i] = eachDifficulty[i];
+                eachTask[i] = eachDifficulty[i]; // заполняем массив задачами, у каждой из которых своя сложность
             }
             return eachTask;
         }
