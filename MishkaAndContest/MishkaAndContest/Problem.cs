@@ -5,9 +5,9 @@ using System.Text;
 
 namespace MishkaAndContest
 {
-    class CountCalculate
+    class Problem
     {
-        public int CompletedCount(int[] array, int skill)
+        public int CompletedCountProblem(int[] array, int skill)
         {
             int leftSide = array.TakeWhile(x => x <= skill).Count(); // проходим по массиву слева направо
             if(leftSide != array.Count()) // если при проходе слева направо оказалась задача, которую Мишка не может решить

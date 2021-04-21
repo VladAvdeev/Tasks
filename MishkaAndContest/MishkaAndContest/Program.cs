@@ -16,11 +16,11 @@ namespace MishkaAndContest
             Console.WriteLine("Заполните сложность каждой задачи через пробел");
             int[] arr = Array.ConvertAll(Console.ReadLine().Split(' '), int.Parse); // сложность каждой задачи
             
-            TaskArray taskDificluty = new TaskArray();
+            ProblemArray taskDificluty = new ProblemArray();
             int[] fullTask = taskDificluty.FillTask(countTask, arr); // заполняем наш массив задачами со сложностями 
 
-            CountCalculate countCalculate = new CountCalculate();
-            Console.WriteLine(countCalculate.CompletedCount(fullTask, skill)); // высчитываем количество выполненных задач и выводим на консоль
+            Problem countCompletedProblem = new Problem();
+            Console.WriteLine(countCompletedProblem.CompletedCountProblem(fullTask, skill)); // высчитываем количество выполненных задач и выводим на консоль
         }
 
     }
